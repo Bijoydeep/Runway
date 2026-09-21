@@ -1,0 +1,31 @@
+# render.yaml — Render deployment configuration
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: runway
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        sync: false          # Set this manually in the Render dashboard
+      - key: ANTHROPIC_API_KEY
+        sync: false          # Set this manually in the Render dashboard
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+      - key: CORS_ORIGIN
+        value: ""            # Leave empty — frontend is served from the same server

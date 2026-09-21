@@ -1,8 +1,11 @@
 (function () {
   'use strict';
 
-  // Point this at your backend. During local dev that's usually localhost:4000.
-  const API_BASE = window.RUNWAY_API_BASE || 'http://localhost:4000/api';
+  // In production the frontend is served from the same Express server,
+  // so we use a relative /api path. Set window.RUNWAY_API_BASE before this
+  // script loads if you need to override it (e.g. for local dev against a
+  // remote backend).
+  const API_BASE = window.RUNWAY_API_BASE || '/api';
 
   /* ---------------- theme ---------------- */
   const root = document.documentElement;
