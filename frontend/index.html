@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Runway — Resume from your LinkedIn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 26 26" fill="none"><path d="M3 20 L23 6 L18 20 L14 15 L3 20Z" fill="var(--accent)"/></svg>
+      Runway
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <span id="themeIcon">🌙</span><span id="themeLabel">Dark</span>
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div id="heroSection" class="hero">
+    <svg class="runway-line" viewBox="0 0 520 34">
+      <path d="M2 30 C 120 30, 180 30, 260 18 C 340 6, 420 6, 500 6"/>
+      <circle cx="500" cy="6" r="4.5"/>
+    </svg>
+    <h1>Your LinkedIn, turned into a resume that gets read.</h1>
+    <p>Built for students and new grads. Upload the PDF of your LinkedIn profile — Runway rewrites it into a clean, one-page resume in a couple of minutes, ready to download.</p>
+  </div>
+
+  <div class="stepper" id="stepper"></div>
+
+  <div id="app"></div>
+
+  <footer>
+    Runway · your resume data is only stored for the length of your session unless you download it.
+  </footer>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
