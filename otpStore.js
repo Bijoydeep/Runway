@@ -5,7 +5,7 @@
 // database) so codes are visible to every instance behind your load balancer.
 
 const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
-const MAX_ATTEMPTS = 5;
+const MAX_ATTEMPTS = 3;
 
 const store = new Map(); // email -> { code, expiresAt, attempts }
 

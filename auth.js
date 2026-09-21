@@ -11,7 +11,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // Limit OTP requests per IP to slow down abuse of the email-sending endpoint.
 const otpLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 8,
+  max: 3,
   message: { error: 'Too many codes requested. Try again in a few minutes.' },
 });
 
